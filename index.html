@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/281/281761.png" type="image/x-icon">
+    <title>Google Sheet</title>
+    
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="nav-content">
+                <div class="nav-menu">File</div>
+                <div class="nav-menu nav-active">Home</div>
+                <div class="nav-menu">Insert</div>
+                <div class="nav-menu">Layout</div>
+                <div class="nav-menu">Help</div>
+            </div>
+
+            <div class="cell-styles">
+                <span class="material-icons copy">
+                    content_copy
+                </span>
+                <span class="material-icons cut">
+                    content_cut
+                </span>
+                <span class="material-icons paste">
+                    content_paste
+                </span>
+                <select onchange="setFont(this)" class="font-family-selection font-family select">
+                    <option value="monospace">MonoSpace</option>
+                    <option value="sans-serif">Sans-serif</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="cursive">Cursive</option>
+                </select>
+                <select onchange="setSize(this)" class="font-size-selection font-size select">
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                </select>
+                <span class="material-icons bold">
+                    format_bold
+                </span>
+                <span class="material-icons italic">
+                    format_italic
+                </span>
+                <span class="material-icons underline">
+                    format_underlined
+                </span>
+                <span class="start material-icons alignment">
+                    format_align_left
+                </span>
+                <span class="center material-icons alignment">
+                    format_align_center
+                </span>
+                <span class="end material-icons alignment">
+                    format_align_right
+                </span>
+                <div class="color-prop">
+                    <label for="color" class="material-icons">
+                        format_color_text
+                    </label>
+                    <input onchange="textColor(this)" type="color" name="color" id="color" class="font-color-prop">
+                </div>
+                <div class="color-prop">
+                    <label for="bgcolor" class="material-icons">
+                        format_color_fill
+                    </label>
+                    <input onchange="backgroundColor(this)" type="color" name="bgcolor" id="bgcolor" class="BGcolor-prop">
+                </div>
+                <span class="material-icons download">
+                    cloud_download
+                </span>
+                <span class="material-icons open">
+                    cloud_upload
+                </span>
+            </div>
+
+            <div class="active-cell-data">
+                <b class="address-bar" id="active_cell">Null</b>
+                <img class="formula-icon" src="https://img.icons8.com/ios/50/000000/formula-fx.png"/>
+                <input type="text" class="formula-bar">
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid-header"></div>
+        </div>
+        
+        <div class="footer">
+            <span class="material-icons new-sheet">
+                post_add
+            </span>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="./sheet.js"></script>
+    <script src="functionaities.js"></script>
+</body>
+</html>
